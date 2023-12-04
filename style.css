@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --cor-pincipal: #FFFFFF;
+    --cor-secundaria: #C0C0C0;
+    --cor-botao: #167BF7;
+    --cor-fundo: #00030c;
+
+    --fonte-primaria: 'Inter', sans-serif;
+}
+* {
+    margin: 0; 
+    padding: 0;
+}
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-pincipal);
+    font-family: var(--fonte-primaria);
+    font-size: 16px;
+    font-weight: 400;
+}
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center;
+}
+.principal--caixa{
+    margin: 0 6em;
+}
+.principal--titulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 28px;
+}
+.principal--imagem {
+    margin: 1em 0 2em 0;
+}
+
+.principal--botao {
+    background-color: var(--cor-botao);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-pincipal);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1em;
+    transition: all 150ms ease-in-out;
+    border: 2px solid var(--cor-botao);
+}
+.principal--botao:hover{
+    box-shadow: 0 0 10px 0 var(--cor--botao) inset, 0 0 10px 4px var(--cor-botao);
+}
+.principal--botao--secundario {
+    color: var(--cor-pincipal);
+    padding: 1em;
+    border: 2px solid var(--cor-pincipal);
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5em;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.principal--botao--secundario:hover {
+    box-shadow: 0 0 40px 40px var(--cor-pincipal) inset, 0 0 5px 0px var(--cor-pincipal);
+    color: var(--cor-botao);
+}
+.principal--paragrafo {
+    font-size: 12px;
+    color: var(--cor-secundaria);
+}
+
+.secundaria--imagem {
+    width: 80%;
+}
+.secundario {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin: 0 10em;
+}
+.secundario--titulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.1em;
+}
+.secundario--paragrafo {
+    color: var(--cor-secundaria)
+}
+.terceiro {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    margin: 10em 8em;
+}
+.terceiro--caixa {
+    margin: 2em;
+}
+.terceiro--titulo {
+    font-size: 16px;
+    color: var(--cor-secundaria);
+    font-weight: 400;
+}
+.terceiro--botao {
+    color: var(--cor-pincipal);
+    background-color: var(--cor-botao);
+    padding: 1em;
+    border: 2px solid var(--cor-botao);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+}
+.terceiro--imagem {
+    width: 80%;
+}
+.quarto {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    margin: 10em 10em;
+}
+.quarto--titulo {
+    font-family: var(--fonte-primaria);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0.1em;
+}
+.quarto--descricao {
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    font-weight: 400;
+}
+.quarto--imagem {
+    width: 80%;
+}
+.dispositivos--lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+.dispositivos {
+    text-align: center;
+}
+.dispositivos--titulos {
+    font-size: 48px;
+    font-weight: 700;
+}
+.lista--items {
+    font-size: 32px;
+    font-weight: 400;
+}
+.rodape--lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+.rodape--texto {
+   margin: 1em 0;
+   color: var(--cor-secundaria);
+   font-size: 10px;
+}
+.rodape--links a{
+    text-decoration: line;
+    color: var(--cor-pincipal);
+    margin-left: 1em;
+}
+.rodape--links a:hover {
+    color: var(--cor-botao);
+}
+.rodape {
+    text-align: center;
+    margin: 3em;
+}
+
+/* Estilos para celulares */
+
+@media screen and (max-width: 760px) {
+    .principal {
+        background-image: none;
+        display: block
+    }
+    .principal--imagem {
+        width: 50vw;
+    }
+    .principal--caixa {
+        margin: 2em 2em;
+    }
+    .secundario {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 0 2em;
+    }
+    .secundaria--imagem {
+        width: 50vw;
+    }
+    .secundario--titulo {
+        font-size: 30px;
+        margin-bottom: 0.3em;
+        text-align: center;
+    }
+    .secundario--paragrafo {
+        text-align: center;
+    }
+    .terceiro {
+        display: flex;
+        text-align: center;
+        margin: 5em 2em 0 2em;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .terceiro--imagem {
+        width: 50vw;
+    }
+    .quarto {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 5em 2em 0 2em;
+    }
+    .quarto--imagem {
+        width: 50vw;
+    }
+    .dispositivos--lista {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 1em 0 1em 0;
+        flex-direction: column;
+    }
+    .dispositivos {
+        margin-top: 5em;
+    }
+    
+
+}
